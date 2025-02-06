@@ -10,12 +10,9 @@ import type React from "react"
 
 const queryClient = new QueryClient()
 
-const projectId = process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID as string;
-
-
 const config = getDefaultConfig({
   appName: "Challenge-Front",
-  projectId,
+  projectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID as string,
   chains: [sepolia],
 })
 
